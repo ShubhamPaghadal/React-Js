@@ -9,12 +9,14 @@ export default function Home() {
           <div className="max-w-xl sm:mt-1 mt-80 space-y-8 text-center sm:text-right sm:ml-auto">
             <h2 className="text-4xl font-bold sm:text-5xl">
               Download Now
-              <span className="hidden sm:block text-4xl">Lorem Ipsum</span>
+              <span className="hidden sm:block text-4xl">
+                Animals HD Images
+              </span>
             </h2>
 
             <Link
               className="inline-flex text-white items-center px-6 py-3 font-medium bg-orange-700 rounded-lg hover:opacity-75"
-              to="/"
+              to="https://www.pexels.com/search/animal"
             >
               <svg
                 fill="white"
@@ -34,7 +36,7 @@ export default function Home() {
         <div className="absolute inset-0 w-full sm:my-20 sm:pt-1 pt-12 h-full ">
           <img
             className="w-96"
-            src="https://i.ibb.co/5BCcDYB/Remote2.png"
+            src="https://images.ctfassets.net/hrltx12pl8hq/1D85eAdM0IhXrEYsoOt7Ut/107424ea3e7e10ab3203446dae175cf7/3_jungle_animals.webp"
             alt="image1"
           />
         </div>
@@ -43,13 +45,13 @@ export default function Home() {
       <div className="grid  place-items-center sm:mt-20">
         <img
           className="sm:w-96 w-48"
-          src="https://i.ibb.co/2M7rtLk/Remote1.png"
+          src="https://images.pexels.com/photos/47547/squirrel-animal-cute-rodents-47547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="image2"
         />
       </div>
 
       <h1 className="text-center text-2xl sm:text-5xl py-10 font-medium">
-        Lorem Ipsum Yojo
+        "Animals are such agreeable friends"
       </h1>
     </div>
   );

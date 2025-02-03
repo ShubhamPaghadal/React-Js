@@ -1,6 +1,7 @@
 import "./App.css";
 // import A from "./Hooks/A";
 import Router from "./Router/Router";
+// import Searchpara from "./Router/Searchpara";
 // import Prac_hooks from "./Hooks/Prac_hooks";
 // import useCustom_Hook from "./Hooks/useCustom_Hook";
 // import Error_handling from "./practice-react/Error_handling";
@@ -22,6 +23,7 @@ import Router from "./Router/Router";
 // import Usereduce from "./Hooks/Usereduce";
 // import Usecontext from "./Hooks/Usecontext";
 // import Usestate from "./Hooks/Usestate";
+// import Router_pra from "./Router/Router_Pra/Router_pra";
 
 function App() {
   return (
@@ -51,6 +53,8 @@ function App() {
       {/* <Prac_hooks /> */}
       <Router />
       {/* <A /> */}
+      {/* <Router_pra /> */}
+      {/* <Searchpara /> */}
     </>
   );
 }
