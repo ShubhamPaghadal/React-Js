@@ -8,3 +8,4 @@ function User() {
 }
 
 export default User;
+// Compare this snippet from myreactapp/src/Router/Router.jsx:

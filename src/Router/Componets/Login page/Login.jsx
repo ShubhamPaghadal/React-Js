@@ -34,7 +34,7 @@ function Login() {
 
     // localStorage.setItem("username", e.target.username.value);
     console.log("username", uname);
-    navigator("/");
+    navigator("/about");
     setPass("");
     setuname("");
   };

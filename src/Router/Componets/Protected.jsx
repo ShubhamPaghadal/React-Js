@@ -9,11 +9,6 @@ function Protected(props) {
     if (!login) {
       navigate("/login");
     }
-    if (login[0].role === "admin") {
-      navigate("/admin");
-    } else {
-      navigate("/user");
-    }
   }, []);
 
   return (

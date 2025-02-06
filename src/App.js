@@ -1,6 +1,10 @@
 import "./App.css";
+// import Axios_Get from "./Axios/Axios_Get";
+import Axios_Post from "./Axios/Axios_Post";
+// import Task from "./Practice_Task/practice";
+// import Fetch from "./Fetch_Api/Fetch";
 // import A from "./Hooks/A";
-import Router from "./Router/Router";
+// import Router from "./Router/Router";
 // import Searchpara from "./Router/Searchpara";
 // import Prac_hooks from "./Hooks/Prac_hooks";
 // import useCustom_Hook from "./Hooks/useCustom_Hook";
@@ -24,6 +28,7 @@ import Router from "./Router/Router";
 // import Usecontext from "./Hooks/Usecontext";
 // import Usestate from "./Hooks/Usestate";
 // import Router_pra from "./Router/Router_Pra/Router_pra";
+// import practice from "./Practice_Task/practice";
 
 function App() {
   return (
@@ -51,10 +56,14 @@ function App() {
       {/* <Custom_Hook /> */}
       {/* <useCustom_Hook /> */}
       {/* <Prac_hooks /> */}
-      <Router />
+      {/* <Router /> */}
       {/* <A /> */}
       {/* <Router_pra /> */}
       {/* <Searchpara /> */}
+      {/* <Axios_Get /> */}
+      <Axios_Post />
+      {/* <Fetch /> */}
+      {/* <Task /> */}
     </>
   );
 }
