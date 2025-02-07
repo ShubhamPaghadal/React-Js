@@ -39,60 +39,62 @@ function Axios_Post() {
     e.preventDefault();
     let data = { firstName: selectuser?.firstName, email: selectuser?.email };
     const response = axios
-      .put(`https://dummyjson.com/users/${selectuser?.id}`,
-        headers: { "Content-Type": "application/json" }
-        data,
+      .put(`https://dummyjson.com/users/${selectuser?.id}`, data, {
+        headers: { "Content-Type": "application/json" },
       })
+
       .then((response) => {
-        console.log(response.data);
+        console.log("response data", response.data);
+        getdata();
+        setselectuser(null);
       })
       .catch((error) => {
         console.log(error);
       });
   };
+  console.log("selectuser", selectuser);
 
   return (
     <div>
       Axios_Post
       <div className="login-container">
         <h1>Login</h1>
-        <form>
-          <div className="form-group">
-            <label htmlFor="name">Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="firstName"
-              value={selectuser?.firstName}
-              onChange={handaldata}
-              required
-            />
-          </div>
 
-          <div className="form-group">
-            <label htmlFor="email">email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={selectuser?.email}
-              onChange={handaldata}
-              required
-            />
-          </div>
+        <div className="form-group">
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="firstName"
+            value={selectuser?.firstName ? selectuser?.firstName : ""}
+            onChange={handaldata}
+            required
+          />
+        </div>
 
-          <button className="red" onClick={handalupdate}>
-            Update
-          </button>
-        </form>
+        <div className="form-group">
+          <label htmlFor="email">email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={selectuser?.email ? selectuser?.email : ""}
+            onChange={handaldata}
+            required
+          />
+        </div>
+
+        <button className="red" onClick={handalupdate}>
+          Update
+        </button>
       </div>
       {api?.users?.length > 0 &&
         api?.users?.map((item) => {
           return (
             <div key={item?.id}>
-              <button onClick={() => setselectuser(item)}>Edit</button>
               <h1>{item?.firstName}</h1>
               <p>{item?.email}</p>
+              <button onClick={() => setselectuser(item)}>Edit</button>
             </div>
           );
         })}
