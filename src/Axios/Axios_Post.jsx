@@ -25,12 +25,14 @@ function Axios_Post() {
   //         console.log(error);
   //       });
   //   };
+
   const getdata = async () => {
     const response = await axios.get("https://dummyjson.com/users/");
     const data = response.data;
     setApi(data);
     console.log("api", data);
   };
+
   useEffect(() => {
     getdata();
   }, []);
@@ -39,7 +41,25 @@ function Axios_Post() {
     e.preventDefault();
     let data = { firstName: selectuser?.firstName, email: selectuser?.email };
     const response = axios
-      .put(`https://dummyjson.com/users/${selectuser?.id}`, data, {
+      .patch(`https://dummyjson.com/users/${selectuser?.id}`, data, {
+        headers: { "Content-Type": "application/json" },
+      })
+
+      .then((response) => {
+        console.log("response data", response.data);
+        getdata();
+        setselectuser(null);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const handaldelet = (e) => {
+    e.preventDefault();
+    let data = { firstName: selectuser?.firstName, email: selectuser?.email };
+    const response = axios
+      .delete(`https://dummyjson.com/users/${selectuser?.id}`, {
         headers: { "Content-Type": "application/json" },
       })
 
@@ -86,6 +106,10 @@ function Axios_Post() {
 
         <button className="red" onClick={handalupdate}>
           Update
+        </button>
+
+        <button className="red" onClick={handaldelet}>
+          Delete
         </button>
       </div>
       {api?.users?.length > 0 &&
