@@ -1,4 +1,5 @@
 import "./App.css";
+// import Axios_patch from "./Axios/Axios_patch";
 // import Axios_Get from "./Axios/Axios_Get";
 import Axios_Post from "./Axios/Axios_Post";
 // import Task from "./Practice_Task/practice";
@@ -64,6 +65,7 @@ function App() {
       <Axios_Post />
       {/* <Fetch /> */}
       {/* <Task /> */}
+      {/* <Axios_patch /> */}
     </>
   );
 }
